@@ -219,7 +219,7 @@ class TwitterFeedBlock extends BlockBase implements ContainerFactoryPluginInterf
   private function format_hashtags($tweet = array()) {
 
     if(strpos($tweet,'#') !== false) {
-      $tweet = preg_replace('/(^|\s)#(\w*[a-zA-Z_]+\w*)/', ' <a href="https://twitter.com/hashtag/$2" target="_blank">#$2</a>', $tweet);
+      $tweet = preg_replace('/(^|\s)#(\w*[a-zA-ZüöäßÜÄÖ_]+\w*)/', ' <a href="https://twitter.com/hashtag/$2" target="_blank">#$2</a>', $tweet);
     }
     return $tweet;
   }
